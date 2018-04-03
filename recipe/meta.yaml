@@ -1,4 +1,4 @@
-{% set version = "1.0rc2" %}
+{% set version = "1.0rc3" %}
 
 package:
   name: pydensecrf
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pydensecrf/pydensecrf-{{ version }}.tar.gz
-  sha256: c0d98dfa660d01056898a01ed7e9ca77fd9a5ef6440dd3b108142dd899c0ff5f
+  sha256: 08be1603af2bede05c7697b6018e8e3059de7cc181e4e784b334889dcc749aa5
 
 build:
   number: 0
