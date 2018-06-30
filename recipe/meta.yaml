@@ -9,16 +9,18 @@ source:
   sha256: 08be1603af2bede05c7697b6018e8e3059de7cc181e4e784b334889dcc749aa5
 
 build:
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - pip
     - cython >=0.22
     - msinttypes  # [win and py<35]
-    - toolchain
   run:
     - python
 
