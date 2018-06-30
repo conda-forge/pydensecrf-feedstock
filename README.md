@@ -14,14 +14,16 @@ Summary: A python interface to Philipp Krähenbühl's fully-connected (dense) CR
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pydensecrf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pydensecrf-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pydensecrf-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pydensecrf-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pydensecrf-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pydensecrf-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pydensecrf-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pydensecrf-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pydensecrf-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pydensecrf-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pydensecrf-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pydensecrf-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pydensecrf/badges/version.svg)](https://anaconda.org/conda-forge/pydensecrf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pydensecrf/badges/downloads.svg)](https://anaconda.org/conda-forge/pydensecrf)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pydensecrf-green.svg)](https://anaconda.org/conda-forge/pydensecrf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydensecrf.svg)](https://anaconda.org/conda-forge/pydensecrf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydensecrf.svg)](https://anaconda.org/conda-forge/pydensecrf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydensecrf.svg)](https://anaconda.org/conda-forge/pydensecrf) |
 
 Installing pydensecrf
 =====================
