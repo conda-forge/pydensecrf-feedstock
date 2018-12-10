@@ -10,7 +10,7 @@ source:
 
 build:
   number: 1001
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -29,14 +29,11 @@ test:
     - numpy
   imports:
     - pydensecrf
-  commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://github.com/lucasb-eyer/pydensecrf
   license: MIT
-  summary: "A python interface to Philipp Krähenbühl's fully-connected (dense) CRF code."
+  summary: "A python interface to Philipp Krähenbühl's fully-connected (dense) CRF code"
   license_family: MIT
 
 extra:
