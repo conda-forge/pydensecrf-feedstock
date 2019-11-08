@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: A python interface to Philipp Krähenbühl's fully-connected (dense) CRF code.
+Summary: A python interface to Philipp Krähenbühl's fully-connected (dense) CRF code
 
 
 
