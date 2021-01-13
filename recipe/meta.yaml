@@ -10,7 +10,7 @@ source:
 
 build:
   number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -30,8 +30,6 @@ test:
   imports:
     - pydensecrf
   commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://github.com/lucasb-eyer/pydensecrf
