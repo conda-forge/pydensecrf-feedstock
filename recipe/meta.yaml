@@ -8,6 +8,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydensecrf-{{ version }}.tar.gz
   sha256: 08be1603af2bede05c7697b6018e8e3059de7cc181e4e784b334889dcc749aa5
+  patches:
+    # we can drop this one in the next release
+    - backport_108.patch
 
 build:
   number: 2
