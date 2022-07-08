@@ -16,8 +16,8 @@ build:
   number: 2
   script:
     # ensure that we re-cythonize these
-    - rm -f pydensecrf/densecrf.cpp pydensecrf/eigen.cpp pydensecrf/densecrf/external/liblbfgs/sample/sample.cpp  # [not win]
-    - del pydensecrf/densecrf.cpp pydensecrf/eigen.cpp pydensecrf/densecrf/external/liblbfgs/sample/sample.cpp  # [win]
+    - rm -f pydensecrf/densecrf.cpp pydensecrf/eigen.cpp  # [not win]
+    - del pydensecrf\densecrf.cpp pydensecrf\eigen.cpp  # [win]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
