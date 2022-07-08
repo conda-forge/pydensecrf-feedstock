@@ -1,16 +1,21 @@
+{% set name = "pydensecrf" %}
 {% set version = "1.0rc3" %}
 
 package:
-  name: pydensecrf
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pydensecrf/pydensecrf-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydensecrf-{{ version }}.tar.gz
   sha256: 08be1603af2bede05c7697b6018e8e3059de7cc181e4e784b334889dcc749aa5
 
 build:
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 2
+  script:
+    # ensure that we re-cythonize these
+    - rm -f pydensecrf/densecrf.cpp pydensecrf/eigen.cpp pydensecrf/densecrf/external/liblbfgs/sample/sample.cpp  # [not win]
+    - del pydensecrf/densecrf.cpp pydensecrf/eigen.cpp pydensecrf/densecrf/external/liblbfgs/sample/sample.cpp  # [win]
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -21,23 +26,24 @@ requirements:
     - pip
     - cython >=0.22
     - msinttypes  # [win and py<35]
+    - numpy
   run:
     - python
+    - {{ pin_compatible('numpy') }}
 
 test:
-  requires:
-    - numpy
   imports:
     - pydensecrf
   commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://github.com/lucasb-eyer/pydensecrf
   license: MIT
   summary: "A python interface to Philipp Krähenbühl's fully-connected (dense) CRF code."
-  license_family: MIT
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
