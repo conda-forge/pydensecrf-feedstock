@@ -13,7 +13,7 @@ source:
     - backport_108.patch
 
 build:
-  number: 3
+  number: 4
   script:
     # ensure that we re-cythonize these
     - rm -f pydensecrf/densecrf.cpp pydensecrf/eigen.cpp  # [not win]
