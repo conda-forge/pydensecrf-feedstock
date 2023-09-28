@@ -7,7 +7,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 numpy:
-- '1.20'
+- '1.22'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -19,3 +19,4 @@ target_platform:
 zip_keys:
 - - python
   - numpy
+  - channel_sources
