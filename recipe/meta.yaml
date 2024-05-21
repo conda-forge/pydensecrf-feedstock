@@ -13,7 +13,7 @@ source:
     - backport_108.patch
 
 build:
-  number: 5
+  number: 6
   script:
     # ensure that we re-cythonize these
     - rm -f pydensecrf/densecrf.cpp pydensecrf/eigen.cpp  # [not win]
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
@@ -32,7 +33,6 @@ requirements:
     - numpy
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
