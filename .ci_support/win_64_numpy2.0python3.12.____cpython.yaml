@@ -1,13 +1,15 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
-- conda-forge/label/python_rc,conda-forge
+- conda-forge/label/numpy_rc,conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2019
 numpy:
-- '1.26'
+- '2.0'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -19,4 +21,3 @@ target_platform:
 zip_keys:
 - - python
   - numpy
-  - channel_sources
