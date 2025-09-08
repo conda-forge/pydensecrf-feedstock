@@ -28,7 +28,7 @@ requirements:
   host:
     - python
     - pip
-    - cython >=0.22,<3
+    - cython >=0.22
     - msinttypes  # [win and py<35]
     - numpy
   run:
